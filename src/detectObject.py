@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # Detect an object with the camera. 
 
+##NOTE: Try changing the number of mask evaluation to reduce processtime
+
 import rospy
 from sensor_msgs.msg import CompressedImage
 import cv2
@@ -44,7 +46,7 @@ minObjectArea = 50                 # Min number of pixels for an object to be re
 start = False                       # Set to true when first image is acquired and will start the program.
 
 update = False                      # True - When a new point has been found and can be published. False - Otherwise.
-
+         
 
 ###################################
 ## Function Declaration
