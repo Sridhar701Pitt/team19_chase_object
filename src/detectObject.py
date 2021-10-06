@@ -31,7 +31,7 @@ error = np.array([5,7,7],np.uint8) # Array of error widths to create the upper a
 titleTracker = "Color Tracker"      # Debugging Image Title
 titleOriginal = "Original Image"    # Debugging Image Title
 titleMask = "Mask Image"            # Debugging Image Title
-debug = True                        # True - shows the images. False - Does not show the images.
+debug = False                    # True - shows the images. False - Does not show the images.
 
 width = 360                         # Width of the image, this is sent in our point message as the z-component to know the zero point in the frame.
 blurSize = 9                        # Blur Kernel Size
