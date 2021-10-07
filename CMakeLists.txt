@@ -8,12 +8,15 @@ project(team19_chase_object)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
+  roslaunch
   geometry_msgs
   roscpp
   rospy
   sensor_msgs
   std_msgs
 )
+
+roslaunch_add_file_check(launch)
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
