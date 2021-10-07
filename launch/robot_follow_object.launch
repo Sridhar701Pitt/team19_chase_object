@@ -1,6 +1,6 @@
 <launch>
   <node name="find_object" pkg="team19_chase_object" type="detectObject.py" output="screen"/>
-  <node name="get_object_node" pkg="team19_chase_object" type="get_object_range.py" output="screen"/>
+  <node name="get_object_range" pkg="team19_chase_object" type="get_object_range.py" output="screen"/>
   <node name="move_Robot" pkg="team19_chase_object" type="moveRobot.py" output="screen"/>
 
   <include name="$(find turtlebot3_bringup)/launch/turtlebot3_camera_robot.launch" />
