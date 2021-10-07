@@ -11,10 +11,15 @@ from geometry_msgs.msg import Point
 from std_msgs.msg import String
 import numpy as np
 import pickle
+import os
 
 # Array of greens HSV
 #greensBlobArr = []
-greenHSV_file_open = open("./src/team19_chase_object/greenHSV_file",'rb')
+
+__location__ = os.path.realpath(
+    os.path.join(os.getcwd(), os.path.dirname(__file__)))
+
+greenHSV_file_open = open(os.path.join(__location__, 'greenHSV_file'),'rb')
 greensBlobArr = pickle.load(greenHSV_file_open)
 greenHSV_file_open.close()
 ###################################
@@ -82,7 +87,7 @@ def mouseEvent(event, x, y, flags, param):
         temp = (lower, upper)
         greensBlobArr.append(temp) 
 
-        greenHSV_file = open("./src/team19_chase_object/greenHSV_file",'wb')
+        greenHSV_file = open(os.path.join(__location__, 'greenHSV_file'),'wb')
         pickle.dump(greensBlobArr, greenHSV_file)
         greenHSV_file.close()
 
