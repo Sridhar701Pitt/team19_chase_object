@@ -15,7 +15,7 @@ def move_Robot(location_Object):
 	error_Translation = 0.5 - location_Object.y
 	if location_Object.x != 88888.0:
 		if (abs(error_Rotation) >= 2.5) and (location_Object.y != 77777.0):
-			move_cmd.angular.z = np.sign(k_Rotation*error_Rotation)* np.clip(np.abs(k_Rotation*error_Rotation),0.1,0.4)
+			move_cmd.angular.z = np.sign(k_Rotation*error_Rotation)* np.clip(np.abs(k_Rotation*error_Rotation),0.0,0.2)
 		elif abs(error_Translation) >= 0.1 and location_Object.y <= 2.5:
 			move_cmd.linear.x = np.sign(k_Translation*error_Translation)* np.clip(np.abs(k_Translation*error_Translation),0.03,0.1)
 
